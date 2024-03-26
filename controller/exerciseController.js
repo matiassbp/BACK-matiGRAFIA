@@ -10,11 +10,15 @@ async function getExercises(req, res) {
 }
 
 async function saveExerciseText(req, res) {
-  try {
-    // código de guardar ejercicio aquí...
-  } catch (error) {
-    res.status(500).json({ error: 'Error al guardar el texto' });
+    try {
+      const { text } = req.body;
+      const exercise = new Exercise({ text });
+      await exercise.save();
+      res.status(201).json({ message: 'Texto guardado exitosamente' });
+    } catch (error) {
+      res.status(500).json({ error: 'Error al guardar el texto' });
+    }
   }
-}
+  
 
 module.exports = { getExercises, saveExerciseText };
