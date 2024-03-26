@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+
+# Archivos de entorno
+.env
+
+# Archivos de configuración locales
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Archivos de construcción
+build/
+dist/
