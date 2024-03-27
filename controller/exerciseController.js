@@ -24,8 +24,4 @@ async function saveExerciseText(req, res) {
     }
   }
   
-  
-  
-  
-
 module.exports = { getExercises, saveExerciseText };
